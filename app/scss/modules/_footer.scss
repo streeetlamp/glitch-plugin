@@ -1,0 +1,23 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Footer Stylesheet
+
+******************************************************************/
+
+.footer {
+
+	background: $black;
+	color: $white;
+
+	&__inner {
+
+		@include container($wrapper-width);
+		padding: 1em 0;
+
+		@at-root .copyright {
+
+		}
+	}
+}

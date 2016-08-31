@@ -1,0 +1,22 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Header Stylesheet
+
+******************************************************************/
+
+
+.header {
+
+	&__inner {
+		@include container($wrapper-width);
+	}
+
+	@at-root .site-title {
+
+		a {
+
+		}
+	}
+}

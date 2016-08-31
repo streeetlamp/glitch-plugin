@@ -1,0 +1,15 @@
+# ignore all node modules
+node_modules/
+
+# ignore debug logs
+npm-debug.log
+
+# ignore sass cache files
+.sass-cache/
+.DS_Store
+
+# ignore generated files
+build/
+app/*.html
+app/css/*.css
+app/js/main.js

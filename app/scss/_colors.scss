@@ -1,0 +1,36 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Color Constants
+
+******************************************************************/
+
+
+/*********************
+COLORS
+*********************/
+
+$black:  #333;
+$grey:   #999;
+$white:  #fff;
+
+
+// used in normalize typography
+$background: $white;
+$text-color: $black;
+$link-color: skyblue;
+$link-hover: darken($link-color, 9%);
+$base-border-color: #ddd;
+
+
+$facebook: #3B5998;
+$twitter: #00ACEE;
+$youtube: #C4302B;
+$vimeo: #86C9EF;
+$linkedin: #0E76A8;
+$behance: #053EFF;
+$soundcloud: #FF7700;
+$github: #171515;
+$instagram: #3F729B;
+$dribbble: #EA4C89;

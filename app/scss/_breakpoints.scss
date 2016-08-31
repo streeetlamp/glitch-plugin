@@ -1,0 +1,103 @@
+// Breakpoint
+// http://breakpoint-sass.com/
+// http://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints
+@import "breakpoint";
+$breakpoint-no-queries: false;
+$breakpoint-no-query-fallbacks: true;
+
+// $mobile-only
+// $mobile-portrait-only
+// $mobile-portrait-and-below
+// $mobile-portrait-and-up
+// $mobile-landscape-only
+// $mobile-landscape-and-below
+// $mobile-landscape-and-up
+// $tablet-only
+// $tablet-portrait-only
+// $tablet-portrait-and-below
+// $tablet-portrait-and-up
+// $tablet-and-up
+// $tablet-landscape-only
+// $tablet-landscape-and-below
+// $tablet-landscape-and-up
+// $desktop-and-up
+// $desktop-and-below
+// $desktop-only
+// $print-style
+
+// The media queries from mobile up until desktop all 
+// trigger at different points along the way
+//
+// And important point to remember is that and width
+// over the portrait width is considered to be part of the
+// landscape width. This allows us to capture widths of devices
+// that might not fit the dimensions exactly. This means the break
+// points are seamless.
+
+$mq-mobile-portrait   : 320px !default;
+$mq-mobile-landscape  : 480px !default;
+$mq-tablet-portrait   : 768px !default;
+$mq-tablet-landscape  : 1024px !default;
+$mq-desktop           : 1382px !default;
+
+// Both portrait and landscape
+$mobile-only: max-width $mq-mobile-landscape;
+
+// Everything up to and including the portrait width of the phone
+// Since it's the smallest query it doesn't need a min
+$mobile-portrait-only: max-width $mq-mobile-portrait;
+
+// Everything up to and including the mobile portrait
+$mobile-portrait-and-below: max-width $mq-mobile-portrait;
+
+// Everything above and including the mobile portrait
+$mobile-portrait-and-up: $mq-mobile-portrait;
+
+// Everthing larger than a portrait mobile up until mobile landscape
+$mobile-landscape-only: ($mq-mobile-portrait + 1) $mq-mobile-landscape;
+
+// Everything up to and including the mobile landscape width
+$mobile-landscape-and-below: max-width $mq-mobile-landscape;
+
+// Everything above and including the mobile landscape width
+$mobile-landscape-and-up: $mq-mobile-portrait + 1;
+
+// Both the portrait and landscape width of the tablet
+// Larger than a landscape mobile but less than or equal to a landscape tablet
+$tablet-only: ($mq-mobile-landscape + 1) $mq-tablet-landscape;
+
+// Everything larger than mobile landscape up until the portrait width of the tablet
+$tablet-portrait-only: ($mq-mobile-landscape + 1) $mq-tablet-portrait;
+
+// Everything below and including the portrait width of the tablet
+$tablet-portrait-and-below: max-width $mq-tablet-portrait;
+
+// Everything above and including the portrait width of the tablet
+$tablet-portrait-and-up: $mq-mobile-landscape + 1;
+
+// Everything above and including the portrait width of the tablet
+$tablet-and-up: $mq-mobile-landscape + 1;
+
+// Larger than portrait but less than or equal to the landscape width
+$tablet-landscape-only: ($mq-tablet-portrait + 1) $mq-tablet-landscape;
+
+// Up to and including the tablet landscape
+$tablet-landscape-and-below: max-width $mq-tablet-landscape;
+
+// Everything larger than portrait tablet
+$tablet-landscape-and-up: $mq-tablet-portrait + 1;
+
+// Everything larger than a landscape tablet
+$desktop-and-up: $mq-tablet-landscape + 1;
+
+// Everything below and including the desktop 
+$desktop-and-below: max-width $mq-desktop;
+
+// Everything larger than a landscape tablet but less than or equal to the desktop
+$desktop-only: ($mq-tablet-landscape + 1) $mq-desktop;
+
+// Retina screens have a 1.5 pixel ratio, not 2
+// $retina: (-webkit-min-device-pixel-ratio 1.5) (min-device-pixel-ratio 1.5);
+
+// PRINT STYLESHEET
+$print-style: print;
